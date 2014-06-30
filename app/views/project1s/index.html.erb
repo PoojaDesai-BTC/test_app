@@ -1,0 +1,43 @@
+<h1>Listing project1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Billing type</th>
+      <th>Start date</th>
+      <th>Deadline date</th>
+      <th>End date</th>
+      <th>Github url</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project1s.each do |project1| %>
+      <tr>
+        <td><%= project1.name %></td>
+        <td><%= project1.code %></td>
+        <td><%= project1.description %></td>
+        <td><%= project1.billing_type %></td>
+        <td><%= project1.start_date %></td>
+        <td><%= project1.deadline_date %></td>
+        <td><%= project1.end_date %></td>
+        <td><%= project1.github_url %></td>
+        <td><%= project1.status %></td>
+        <td><%= link_to 'Show', project1 %></td>
+        <td><%= link_to 'Edit', edit_project1_path(project1) %></td>
+        <td><%= link_to 'Destroy', project1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project1', new_project1_path %>

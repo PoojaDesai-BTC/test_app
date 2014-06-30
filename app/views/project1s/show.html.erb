@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project1.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @project1.code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project1.description %>
+</p>
+
+<p>
+  <strong>Billing type:</strong>
+  <%= @project1.billing_type %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @project1.start_date %>
+</p>
+
+<p>
+  <strong>Deadline date:</strong>
+  <%= @project1.deadline_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @project1.end_date %>
+</p>
+
+<p>
+  <strong>Github url:</strong>
+  <%= @project1.github_url %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project1.status %>
+</p>
+
+<%= link_to 'Edit', edit_project1_path(@project1) %> |
+<%= link_to 'Back', project1s_path %>
